@@ -79,3 +79,6 @@ puts "three is: #{three}"
 # one is: two
 # two is: three
 # three is: one
+# the gsub! method mutates the one, two, three objects -- THE VERY SAME objects
+# that our one, two, three vars (the ones outside the method) point to. Thus,
+# those vars now point to changed strings.
