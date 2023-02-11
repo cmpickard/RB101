@@ -10,9 +10,9 @@ so you have to call chomp() to remove it: Kernel.gets().chomp().
 =end
 
 #single method for all 4 operations
-def math(float1,float2, operation)
+def math(float1, float2, operation)
   case operation
-  when "add" then return float1+float2
+  when "add" then return float1 + float2
   when "subtract" then return float1 - float2
   when "multiply" then return float1 * float2
   else 

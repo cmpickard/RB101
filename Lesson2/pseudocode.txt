@@ -1,0 +1,74 @@
+
+Write pseudocode for the following:
+
+i. a method that returns the sum of two integers
+
+START
+define the method to take two parameters, both ints.
+SET the ints to be 0 by default
+READ the ints passed in by the method call and add them together with +
+RETURN the result
+PRINT the return value
+END
+
+
+ii. a method that takes an array of strings, and returns a string that is all 
+those strings concatenated together
+
+START
+define the method to take an array, SET the array as empty by default
+Iterate over the array's members
+Create a new string variable and append each member to it
+RETURN the resulting string
+END
+
+
+iii. a method that takes an array of integers, and returns a new array with 
+every other element from the original array, starting with the first element. 
+For instance:
+every_other([1,4,7,2,5]) # => [1,7,5]
+
+START
+Method definition w/ an array argument, empty [] by default
+iterate over the array, using the index, rather than the item value
+For each iteration:
+IF the current index modulo 2 == 0,
+append the item at that to a new array
+ELSE go to the next iteration
+RETURN the new array
+END
+
+iv. a method that determines the index of the 3rd occurrence of a given character 
+in a string. For instance, if the given character is 'x' and the string is 
+'axbxcdxex', the method should return 6 (the index of the 3rd 'x'). 
+If the given character does not occur at least 3 times, return nil.
+
+START
+Define method w/ array argument, defaulted to []
+Initialize counter variable at 0
+Iterate over the array, passing both value and index:
+for each iteration, check whether the value is == to the character of interest
+IF not, next
+ELSE, counter ++
+  IF counter == 3, return the current index
+  ELSE next
+RETURN nil (when/if the iteration finishes)
+END
+
+v. a method that takes two arrays of numbers and returns the result of merging 
+the arrays. The elements of the first array should become the elements at the 
+even indexes of the returned array, while the elements of the second array 
+should become the elements at the odd indexes. For instance:
+merge([1, 2, 3], [4, 5, 6]) # => [1, 4, 2, 5, 3, 6]
+You may assume that both array arguments have the same number of elements.
+
+START
+Define method w/ 2 array args (array1, array2)
+Initialize new array with size = array1's size * 2
+Fill every value with nil.
+Iterate over array1, using both value and index:
+store the current value into the new array at index = (old index * 2)
+Iterate over array2, using both value and index:
+store the current value into the new array at index = ((old index * 2) + 1)
+RETURN new array
+END

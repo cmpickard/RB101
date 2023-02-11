@@ -14,3 +14,12 @@ end
 
 sent = "I am not ok"
 p string_lengths(sent)
+
+def extend_greeting(greeting)
+  greeting += " there"
+end
+
+greeting = "hi"
+extend_greeting(greeting)
+
+puts greeting
